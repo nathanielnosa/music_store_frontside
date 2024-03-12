@@ -3,7 +3,7 @@ import slide2 from '../assets/sliders/mslide2.png'
 const Slider = () => {
   return (
     <section id="slider" style={{ background: "#83716A", height: '95vh' }}>
-      <div id="demo" className="carousel slide" data-bs-ride="carousel">
+      <div id="demo" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
 
         <div className="carousel-inner">
           <div className="carousel-item active">

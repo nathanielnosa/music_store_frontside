@@ -25,7 +25,7 @@ const Navbar = () => {
             <ul className="navbar-nav mx-auto mt-2 mt-lg-0">
               {
                 DASHBOARD_TOP_LINKS.map(({ key, label, path }) => (
-                  <li className="nav-item" key={key}>
+                  <li className="nav-item px-3" key={key}>
                     <Link to={path} className={location.pathname === path ? "nav-link active" : "nav-link"}>{label}</Link>
                   </li>
                 ))
@@ -42,7 +42,7 @@ const Navbar = () => {
                 }
               />
               <button
-                className="btn btn-outline-success my-2 my-sm-0"
+                className="btn btn-outline-dark my-2 my-sm-0"
                 type="submit"
               >
                 Search
