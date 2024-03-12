@@ -5,3 +5,12 @@ html {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+;
+
+:root {
+  --main-color: #83716A;
+  --secondary-color: #76655F;
+}
+
+;
