@@ -4,8 +4,11 @@ import {
   Route,
   createRoutesFromElements
 } from "react-router-dom"
+
 import App from "../App"
 import Home from "../pages/Home"
+import '../index.css'
+
 const RouterMain = () => {
   const routers = createBrowserRouter(
     createRoutesFromElements(
