@@ -3,10 +3,11 @@ import Product from "./Product"
 
 
 const Products = () => {
+
   return (
     <section id="pro">
       <div className="container-fluid py-3">
-        <h2>FEATURED PRODUCTS</h2>
+        <h2>FEATURED PRODUCT</h2>
         <div className="row g-3">
 
           {featuredProducts.map((product) => (

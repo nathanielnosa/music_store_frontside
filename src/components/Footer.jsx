@@ -1,9 +1,9 @@
-import { FaCcMastercard, FaCcVisa, FaCreditCard, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMap, FaMapMarked, FaMobile, FaPaypal, FaPhone, FaTwitter, FaWhatsapp } from "react-icons/fa"
+import { FaCcMastercard, FaCcVisa, FaCreditCard, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobile, FaPaypal, FaTwitter, FaWhatsapp } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
-    <section id="footer" className="bg-light py-4">
+    <section id="footer" className="bg-light py-3">
       <div className="container">
         <div className="row justify-content-between">
           <div className="col-md-3">
@@ -44,7 +44,7 @@ const Footer = () => {
               <li className="list-group-item bg-light border-0"><FaMobile /> 08177507780</li>
               <li className="list-group-item bg-light border-0"><FaEnvelope /> proncode@gmail.com</li>
             </ul>
-            <div className="d-flex gap-3">
+            <div className="d-flex gap-3 mt-4">
               <FaPaypal size={35} />
               <FaCreditCard size={35} />
               <FaCcVisa size={35} />

@@ -34,7 +34,7 @@ export const DASHBOARD_TOP_LINKS = [
   {
     key: 'about',
     label: 'About',
-    path: '/collection',
+    path: '/about',
     icon: <FaUserCircle />
   }
 ]
