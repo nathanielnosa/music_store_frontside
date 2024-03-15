@@ -50,7 +50,7 @@ const Navbar = () => {
             </form>
             <div className="d-flex gap-4 my-2 cursor-pointer">
               <Link className="text-dark" to={'login'}><FaUser size={23} style={{ color: 'var(--main-color)' }} /></Link>
-              <FaShoppingBag size={23} style={{ color: 'var(--main-color)' }} />
+              <Link className="text-dark" to={'cart'}><FaShoppingBag size={23} style={{ color: 'var(--main-color)' }} /></Link>
             </div>
           </div>
         </div>

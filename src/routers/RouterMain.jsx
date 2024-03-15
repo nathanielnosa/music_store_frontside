@@ -13,6 +13,7 @@ import About from "../pages/About"
 import Detail from "../pages/Detail"
 import Register from "../pages/Register"
 import Login from "../pages/Login"
+import Cart from "../pages/Cart"
 
 const RouterMain = () => {
   const routers = createBrowserRouter(
@@ -24,6 +25,7 @@ const RouterMain = () => {
         <Route path="/music/:id" element={<Detail />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/cart" element={<Cart />} />
 
       </Route>
     )
