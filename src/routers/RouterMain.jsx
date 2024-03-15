@@ -11,6 +11,8 @@ import '../index.css'
 import Music from "../pages/Music"
 import About from "../pages/About"
 import Detail from "../pages/Detail"
+import Register from "../pages/Register"
+import Login from "../pages/Login"
 
 const RouterMain = () => {
   const routers = createBrowserRouter(
@@ -20,6 +22,9 @@ const RouterMain = () => {
         <Route path="/musics" element={<Music />} />
         <Route path="/about" element={<About />} />
         <Route path="/music/:id" element={<Detail />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+
       </Route>
     )
 
