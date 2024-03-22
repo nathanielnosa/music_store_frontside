@@ -2,22 +2,26 @@ export const collections = [
   {
     id: 1,
     img: "https://theme760-retro-vinyl-store.myshopify.com/cdn/shop/files/5_255x180_crop_center.jpg?v=1613784960",
-    title: "Beats"
+    title: "Beats",
+    collection: "beat"
   },
   {
     id: 2,
     img: "https://theme760-retro-vinyl-store.myshopify.com/cdn/shop/files/6_255x180_crop_center.jpg?v=1613784960",
-    title: "Jazz"
+    title: "Jazz",
+    collection: "jazz"
   },
   {
     id: 3,
     img: "https://theme760-retro-vinyl-store.myshopify.com/cdn/shop/files/7_255x180_crop_center.jpg?v=1613784960",
-    title: "Live Music"
+    title: "Live Music",
+    collection: "live"
   },
   {
-    id: 3,
+    id: 4,
     img: "https://theme760-retro-vinyl-store.myshopify.com/cdn/shop/files/8_255x180_crop_center.jpg?v=1613784960",
-    title: "Funk"
+    title: "Funk",
+    collection: "funk"
   },
 ]
 

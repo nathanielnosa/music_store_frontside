@@ -9,12 +9,13 @@ import {
 import App from "../App"
 import Home from "../pages/Home"
 import '../index.css'
-import Music from "../pages/Music"
 import About from "../pages/About"
 import Detail from "../pages/Detail"
 import Register from "../pages/Register"
 import Login from "../pages/Login"
 import Cart from "../pages/Cart"
+import Music from "../pages/Music"
+import Collection from "../pages/Collection"
 
 const RouterMain = () => {
   const user = true
@@ -24,8 +25,9 @@ const RouterMain = () => {
         <Route index element={<Home />} />
         <Route path="/musics" element={<Music />} />
         <Route path="/about" element={<About />} />
-        <Route path="/music/:category" element={<Detail />} />
-        <Route path="/music/:id" element={<Detail />} />
+        <Route path="/collection" element={<Collection />} />
+        <Route path="/music/:category" element={<Music />} />
+        <Route path="/detail/:id" element={<Detail />} />
         <Route path="/register" element={user ? <Navigate to={"/"} /> : <Register />} />
         <Route path="/login" element={user ? <Navigate to={"/"} /> : <Login />} />
         <Route path="/cart" element={<Cart />} />

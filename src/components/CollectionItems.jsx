@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 
 const CollectionItems = ({ items }) => {
-  const { img, title } = items
+  const { img, title,collection } = items
   return (
-    <Link className="text-dark text-decoration-none">
+    <Link className="text-dark text-decoration-none" to={`/music/${collection}/`}>
       <div className="card border-0">
         <div className="card-img">
           <img src={img} alt="" className="img-fluid w-100" />
