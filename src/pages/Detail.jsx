@@ -30,6 +30,9 @@ const Detail = () => {
       setQuantity(quantity + 1)
     }
   }
+  const handleAddToCart=()=>{
+    
+  }
 
   return (
     <section id="detailed">
@@ -66,11 +69,11 @@ const Detail = () => {
                 <strong className='border p-2'>{quantity}</strong>
                 <FaPlusCircle onClick={() => handleQuantity('inc')} />
               </div>
-              <button className="btn btn-dark">Add to cart</button>
+              <button onClick={ handleAddToCart} className="btn btn-dark">Add to cart</button>
             </div>
           </div>
 
-        </div> 
+        </div>
       </div>
     </section>
   )
