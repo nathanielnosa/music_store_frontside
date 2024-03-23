@@ -8,15 +8,13 @@ const Products = ({ collection, filters, sorts }) => {
   const [filteredProduct, setFilteredProduct] = useState([])
 
   useEffect(() => {
-    console.log('fetching data...')
     const fetchData = async () => {
       try {
-        const getMusic = await fetch(collection
-          ? `${import.meta.env.VITE_SERVER_URL}/product?collection=${collection}`
-          : `${import.meta.env.VITE_SERVER_URL}/product`)
+        const getMusic = await fetch(
+          collection ? `${import.meta.env.VITE_SERVER_URL}/product?collection=${collection}`
+            : `${import.meta.env.VITE_SERVER_URL}/product`)
         const result = await getMusic.json()
         setProduct(result)
-        console.log(result)
       } catch (error) {
         toast.error(error.message)
       }
@@ -25,16 +23,12 @@ const Products = ({ collection, filters, sorts }) => {
   }, [collection])
 
   useEffect(() => {
-    console.log('fetching data...', filters)
-
     collection && setFilteredProduct(
       product.filter(item => Object.entries(filters).every(([key, value]) => item[key] && item[key].includes(value)))
     )
   }, [product, collection, filters])
 
   useEffect(() => {
-    console.log('fetching data...', sorts)
-
     if (sorts === "newest") {
       setFilteredProduct(prev => (
         [...prev].sort((a, b) => a.createdAt - b.createdAt)

@@ -1,15 +1,16 @@
 import { FaMinusCircle, FaPlusCircle } from 'react-icons/fa'
-import image from '../assets/sliders/mslide1.png'
-import { Link, useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 import { useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast'
+import { useDispatch } from 'react-redux'
+import { addProduct } from '../redux/cartRedux'
 const Detail = () => {
 
   const location = useLocation()
   const id = location.pathname.split("/")[2]
   const [product, setProduct] = useState({})
   const [quantity, setQuantity] = useState(1)
-
+  const dispatch = useDispatch()
   useEffect(() => {
     const getProduct = async () => {
       try {
@@ -30,8 +31,8 @@ const Detail = () => {
       setQuantity(quantity + 1)
     }
   }
-  const handleAddToCart=()=>{
-    
+  const handleAddToCart = () => {
+    dispatch(addProduct({ ...product, quantity }))
   }
 
   return (
@@ -69,7 +70,7 @@ const Detail = () => {
                 <strong className='border p-2'>{quantity}</strong>
                 <FaPlusCircle onClick={() => handleQuantity('inc')} />
               </div>
-              <button onClick={ handleAddToCart} className="btn btn-dark">Add to cart</button>
+              <button onClick={handleAddToCart} className="btn btn-dark">Add to cart</button>
             </div>
           </div>
 

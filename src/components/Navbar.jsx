@@ -1,7 +1,10 @@
 import { Link, useLocation } from "react-router-dom"
 import { DASHBOARD_TOP_LINKS } from "../lib/constants"
 import { FaShoppingBag, FaUser } from "react-icons/fa";
+import { useSelector } from 'react-redux'
+
 const Navbar = () => {
+  const quantity = useSelector(state => state.cart.quantity)
   const location = useLocation();
   return (
     <section id="navbar">
@@ -48,9 +51,14 @@ const Navbar = () => {
                 Search
               </button>
             </form>
-            <div className="d-flex gap-4 my-2 cursor-pointer">
+            <div className="d-flex gap-2 my-2 cursor-pointer">
               <Link className="text-dark" to={'login'}><FaUser size={23} style={{ color: 'var(--main-color)' }} /></Link>
-              <Link className="text-dark" to={'cart'}><FaShoppingBag size={23} style={{ color: 'var(--main-color)' }} /></Link>
+              <Link className="text-dark" to={'cart'}>
+                <span style={{ position: 'relative', display: 'inline-block' }}>
+                  <FaShoppingBag size={23} />
+                  <span className="badge bg-info" style={{ position: 'absolute', top: '-7px', right: '-9px' }}>{quantity}</span>
+                </span>
+              </Link>
             </div>
           </div>
         </div>
