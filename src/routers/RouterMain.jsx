@@ -15,9 +15,9 @@ import Collection from "../pages/Collection";
 import Success from "../pages/Success";
 import { Navigate } from 'react-router-dom';
 import CancelPay from "../pages/CancelPay";
-
+import { useSelector } from "react-redux"
 const RouterMain = () => {
-  const user = true; // Assuming
+  const user = useSelector(state => state.user.currentUser)
   return (
     <Router>
       <Routes>
